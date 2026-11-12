@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --paper: #edefea;
+  --paper-deep: #e2e5de;
+  --ink: #17191c;
+  --graphite: #5b6058;
+  --rule: #c6cbc1;
+  --cobalt: #2c46d8;
+  --cobalt-soft: #d9defa;
+  --on-cobalt: #edefea;
+}
+
+[data-theme="dark"] {
+  --paper: #15171a;
+  --paper-deep: #1d2024;
+  --ink: #e8eae4;
+  --graphite: #9a9f96;
+  --rule: #33373c;
+  --cobalt: #7086ff;
+  --cobalt-soft: #26305e;
+  --on-cobalt: #0f1115;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --color-ink: var(--ink);
+  --color-graphite: var(--graphite);
+  --color-rule: var(--rule);
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-soft: var(--cobalt-soft);
+  --color-on-cobalt: var(--on-cobalt);
+}
+
+@theme {
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader Variable", ui-serif, Georgia, serif;
+  --animate-marquee: marquee 38s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 300ms, color 300ms;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background: var(--cobalt);
+  color: var(--on-cobalt);
+}
+
+:focus-visible {
+  outline: 2px solid var(--cobalt);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@layer components {
+  /* Display headings: tight, condensed, and set big. */
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: "wdth" 84, "opsz" 96;
+    letter-spacing: -0.035em;
+    line-height: 0.92;
+    font-weight: 640;
+  }
+
+  .link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: var(--rule);
+    transition: text-decoration-color 150ms, color 150ms;
+  }
+  .link:hover {
+    color: var(--cobalt);
+    text-decoration-color: var(--cobalt);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
