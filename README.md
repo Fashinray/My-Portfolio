@@ -27,14 +27,4 @@ Open http://localhost:3000.
 | `components/About.tsx`, `Contact.tsx`, `Header.tsx` | The rest of the page |
 | `app/globals.css` | Colours for light and dark mode, and fonts |
 
-## Before you deploy
 
-- Add LinkedIn / résumé links in `site.links` if you want them.
-- Check with the Beluga team that you're allowed to show that project publicly.
-- If Vault gets a live demo, add a `link` to it in `lib/content.ts`.
-
-## Deploy
-
-Push to GitHub and import the repo on Vercel. No environment variables needed.
-
-Fonts are self-hosted through `@fontsource-variable` (Bricolage Grotesque and Newsreader), so there's no Google Fonts request.
