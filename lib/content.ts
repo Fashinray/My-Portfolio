@@ -4,11 +4,11 @@ export const site = {
   name: "Tolulope Fadare",
   nickname: "Fashinray",
   role: "Frontend developer",
-  location: "Ile-Ife, Nigeria",
+  location: "Nigeria",
   intro:
-    "I'm finishing a Computer Science degree at Obafemi Awolowo University and I build interfaces for the web, mostly with React, Next.js and Tailwind. I care about the small stuff: how a button responds, how a table reads on a phone, whether a page still makes sense when the data is messy.",
+    "I graduated from OAU with a degree in Computer Science with Mathematics, and I now build things for the web with React, Next.js and Tailwind. What I enjoy most is getting the small details right: buttons that respond properly, tables that are easy to read on a phone, and pages that still make sense when the data isn’t clean.",
   email: "tosin5383@gmail.com",
-  // Put your résumé PDF in the /public folder with this exact name.
+  
   resume: {
     href: "/resume.pdf",
     downloadName: "Tolulope-Fadare-Resume.pdf",
@@ -17,7 +17,7 @@ export const site = {
   links: [
     { label: "GitHub", href: "https://github.com/fashinray" },
     // { label: "LinkedIn", href: "https://linkedin.com/in/your-handle" },
-    // { label: "Résumé", href: "/resume.pdf" },
+    { label: "Résumé", href: "/resume.pdf" },
   ],
 };
 
@@ -91,7 +91,7 @@ export const about = {
   paragraphs: [
     "I call myself a frontend developer and I mean it. My favourite part of any project is the layer people actually touch: layouts, states, motion, and the moment something responds to a click.",
     "Before most of this I worked in data QA, checking datasets for the mistakes that slip past everyone else. That habit stuck. I test my own screens the way a stranger would, and I notice when a number is off by one.",
-    "Right now I'm wrapping up my degree at OAU, doing client work, and building small experiments with odd interactions, like a shop you drag things into.",
+    "Right now I studied Computer Science with Mathematics at OAU, doing client work, and building small experiments with odd interactions, like a shop you drag things into.",
   ],
   tools: [
     "React",
